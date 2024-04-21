@@ -15,7 +15,7 @@ const ListEmployeeComponent = () => {
 
   return (
     <div className='container'>
-      <h2>List of Employees</h2>
+      <h2 className='text-center'>List of Employees</h2>
       <table className='table table-striped table-bordered'>
         <thead>
             <tr>

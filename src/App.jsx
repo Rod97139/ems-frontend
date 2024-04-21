@@ -2,14 +2,20 @@ import './App.css'
 import FooterComponent from './components/FooterComponent'
 import HeaderComponent from './components/HeaderComponent'
 import ListEmployeeComponent from './components/ListEmployeeComponent'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+
 
 function App() {
   return (
     <>
-      <h1 className='text-center' >Ems front-end</h1>
-      <HeaderComponent />
-      <ListEmployeeComponent />
-      <FooterComponent />
+      <Router>
+        <HeaderComponent />
+        <Routes>
+          <Route path='/' element= {<ListEmployeeComponent/>}></Route>
+          <Route path='/employees' element= {<ListEmployeeComponent/>}></Route>
+        </Routes>
+        <FooterComponent />
+      </Router>
     </>
   )
 }
